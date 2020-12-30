@@ -26,6 +26,7 @@
         <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <a href= "createuser.php" type="createUser" class = "btn btn-secondary">Create an account</a>
     <a href=""></a>
     </form>
 
