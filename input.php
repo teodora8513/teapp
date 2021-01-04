@@ -22,8 +22,8 @@
     
     <!--Form-->
   
-    </form>
-        <form>
+    
+        <form method ="post" action ="success.php">
         <div class="form-group">
             <label for="companyName">Company name</label>
             <input type="text" class="form-control" id="companyName" placeholder="Ubisoft">
@@ -77,7 +77,7 @@
         </label>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary">INSERT</button>
+    <a href="success.php" class="btn btn-primary">INSERT</a>
     <button type="button" class="btn btn-warning">UPDATE</button>
     <button type="button" class="btn btn-danger">DELETE</button>
     </form>
@@ -92,7 +92,7 @@
         $status = "1";
         $applicationDate = date("d/m/Y");
         $notes ="Notes";
-        //Verifikacija forme
+        /*Verifikacija forme
         function verificate(){
             if(verificateCompanyName() && verificateMail() && verificatePosition() 
                 && verificatePosition() && verificateStatus())
@@ -112,7 +112,7 @@
         }
         function verificateStatus(){
 
-        }
+        }*/
     ?>
     
 

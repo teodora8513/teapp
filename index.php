@@ -3,7 +3,7 @@
         $title = "Home";
         include 'includes/header.php';
         echo '<h1>A place where you can note all your job / internship applications</h1>';
-        
+        require_once 'db/conn.php';
         //Login forma
         
 
