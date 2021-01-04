@@ -1,8 +1,9 @@
     <?php
         $title = "Input page";
         include 'includes/header.php';
+        require_once 'db/conn.php';
         echo '<h1>Please enter your application</h1>';
-        
+        $result = $crud->getStatus();
     ?>
     <!--Labele i input polja za formu
     <label>Name of the company:</label>
@@ -26,58 +27,58 @@
         <form method ="post" action ="success.php">
         <div class="form-group">
             <label for="companyName">Company name</label>
-            <input type="text" class="form-control" id="companyName" placeholder="Ubisoft">
+            <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Ubisoft">
         </div>
         <div class="form-group">
             <label for="position">Position</label>
-            <input type="text" class="form-control" id="position" placeholder="QA intern">
+            <input type="text" class="form-control" id="position" name="position" placeholder="QA intern">
         </div>
         <div class="form-row">
         <div class="form-group col-md-6">
             <label for="contactMail">Contact mail</label>
-            <input type="email" class="form-control" id="contactMail" placeholder="Email">
+            <input type="email" class="form-control" id="contactMail" name="contactMail"  placeholder="Email">
         </div>
     </div>
     
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="city">City</label>
-        <input type="text" class="form-control" id="city" placeholder="Belgrade">
+        <input type="text" class="form-control" id="city" name="city" placeholder="Belgrade">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="doa">Date of sending the application</label>   <!--Date of application-->
-        <input type="text" class="form-control" id="doa" >
+        <input type="text" class="form-control" id="doa" name="doa" >
         </div>
     </div>
         <div class="form-group">
         <label for="notes">Notes</label>
-        <textarea class="form-control" id="notes" rows="3"></textarea>
+        <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
     </div>
     <div class="form-group">
         <!--Status-->
     <label name = "status">Application status</label>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status" value="Accepted" checked>
+        <input value="1" class="form-check-input" type="radio" name="status" id="status" value="Accepted" checked>
         <label class="form-check-label" for="status">
         Accepted
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status" value="Denied">
+        <input value="6" class="form-check-input" type="radio" name="status" id="status" value="Denied">
         <label class="form-check-label" for="status">
         Denied
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status" value="Waiting">
+        <input value="7" class="form-check-input" type="radio" name="status" id="status" value="Waiting">
         <label class="form-check-label" for="exampleRadios3">
         Waiting for the response
         </label>
     </div>
     </div>
-    <a href="success.php" class="btn btn-primary">INSERT</a>
+    <button type="submit" class="btn btn-primary " name="submit">SUBMIT</button>
     <button type="button" class="btn btn-warning">UPDATE</button>
     <button type="button" class="btn btn-danger">DELETE</button>
     </form>
@@ -85,14 +86,14 @@
     
 
     <?php
-        $companyName = "Proba";
+        /*$companyName = "Proba";
         $position = "Praksa";
         $webAddress = "Adresa";
         $contactMail = "Mail";
         $status = "1";
         $applicationDate = date("d/m/Y");
         $notes ="Notes";
-        /*Verifikacija forme
+        Verifikacija forme
         function verificate(){
             if(verificateCompanyName() && verificateMail() && verificatePosition() 
                 && verificatePosition() && verificateStatus())
