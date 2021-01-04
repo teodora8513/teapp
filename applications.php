@@ -1,4 +1,5 @@
 <?php
+    $title = "Applications";
     include 'includes/header.php';
 ?>
 

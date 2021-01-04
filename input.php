@@ -1,4 +1,5 @@
     <?php
+        $title = "Input page";
         include 'includes/header.php';
         echo '<h1>Please enter your application</h1>';
         
@@ -25,46 +26,52 @@
         <form>
         <div class="form-group">
             <label for="companyName">Company name</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Ubisoft">
+            <input type="text" class="form-control" id="companyName" placeholder="Ubisoft">
         </div>
         <div class="form-group">
             <label for="position">Position</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="QA intern">
+            <input type="text" class="form-control" id="position" placeholder="QA intern">
         </div>
         <div class="form-row">
         <div class="form-group col-md-6">
             <label for="contactMail">Contact mail</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <input type="email" class="form-control" id="contactMail" placeholder="Email">
         </div>
     </div>
     
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity" placeholder="Belgrade">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" placeholder="Belgrade">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="doa">Date of sending the application</label>   <!--Date of application-->
+        <input type="text" class="form-control" id="doa" >
         </div>
     </div>
         <div class="form-group">
-        <label for="exampleFormControlTextarea1">Notes</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="notes">Notes</label>
+        <textarea class="form-control" id="notes" rows="3"></textarea>
     </div>
     <div class="form-group">
         <!--Status-->
-    <label name = 'Status'>Application status</label>
+    <label name = "status">Application status</label>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
+        <input class="form-check-input" type="radio" name="status" id="status" value="Accepted" checked>
+        <label class="form-check-label" for="status">
         Accepted
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
+        <input class="form-check-input" type="radio" name="status" id="status" value="Denied">
+        <label class="form-check-label" for="status">
         Denied
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+        <input class="form-check-input" type="radio" name="status" id="status" value="Waiting">
         <label class="form-check-label" for="exampleRadios3">
         Waiting for the response
         </label>
