@@ -42,5 +42,15 @@
             $result = $this->db->query($sql);
             return $result;
         }
+
+        public function getApplicationDetails($id){
+            $sql = "SELECT * FROM application a inner join status s on a.status_id = s.status_id 
+                                                    where application_id = :id";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindparam(':id', $id);
+            $stmt->execute();
+            $result = $stmt->fetch();   //fetch record into one variable
+            return $result;
+        }
     }
 ?>

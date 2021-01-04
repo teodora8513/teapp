@@ -10,11 +10,9 @@
         <th>#</th>
         <th>Company name</th>
         <th>Position</th>
-        <th>Contact mail</th>
-        <th>City</th>
         <th>Date of applicating</th>
-        <th>Notes</th>
         <th>Status</th>
+        <th>Actions</th>
     </tr>
     <tr>
         <?php 
@@ -24,11 +22,9 @@
                 <td><?php echo $r['application_id']?></td>
                 <td><?php echo $r['company_name']?></td>
                 <td><?php echo $r['position']?></td>
-                <td><?php echo $r['contact_mail']?></td>
-                <td><?php echo $r['city']?></td>
                 <td><?php echo $r['doa']?></td>
-                <td><?php echo $r['notes']?></td>
                 <td><?php echo $r['name']?></td>
+                <td><a href="view.php?id=<?php echo $r['application_id']?>" class="btn btn-primary">View</a></td>
             </tr>
         <?php } ?>        
            
