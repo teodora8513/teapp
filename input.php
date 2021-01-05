@@ -79,42 +79,12 @@
     </div>
     </div>
     <button type="submit" class="btn btn-primary " name="submit">SUBMIT</button>
-    <button type="button" class="btn btn-warning">UPDATE</button>
-    <button type="button" class="btn btn-danger">DELETE</button>
+    
     </form>
 
     
 
-    <?php
-        /*$companyName = "Proba";
-        $position = "Praksa";
-        $webAddress = "Adresa";
-        $contactMail = "Mail";
-        $status = "1";
-        $applicationDate = date("d/m/Y");
-        $notes ="Notes";
-        Verifikacija forme
-        function verificate(){
-            if(verificateCompanyName() && verificateMail() && verificatePosition() 
-                && verificatePosition() && verificateStatus())
-                return true;
-            return false;
-
-        }
-        function verificateCompanyName(){
-            if($companyName!=null && $companyName.is_string())
-                return true;
-        }
-        function verificatePosition(){
-
-        }
-        function verificateMail(){
-
-        }
-        function verificateStatus(){
-
-        }*/
-    ?>
+    
     
 
     <?php 

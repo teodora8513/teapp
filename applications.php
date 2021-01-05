@@ -3,6 +3,9 @@
     include 'includes/header.php';
     require_once 'db/conn.php';
     $results =$crud->getApplications();
+
+    
+    
 ?>
 
 <table class="table">
@@ -24,7 +27,13 @@
                 <td><?php echo $r['position']?></td>
                 <td><?php echo $r['doa']?></td>
                 <td><?php echo $r['name']?></td>
-                <td><a href="view.php?id=<?php echo $r['application_id']?>" class="btn btn-primary">View</a></td>
+                <td>
+                    <a href="view.php?id=<?php echo $r['application_id']?>" class="btn btn-primary">View</a>
+                    <a href="edit.php?id=<?php echo $r['application_id']?>" class="btn btn-warning">Edit</a>
+                    <a onclick="return confirm('Are you sure you want to delete this application?')"
+                        href="delete.php?id=<?php echo $r['application_id']?>"
+                         class="btn btn-danger">Delete</a>
+                </td>
             </tr>
         <?php } ?>        
            

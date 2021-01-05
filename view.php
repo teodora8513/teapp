@@ -3,13 +3,12 @@
     include 'includes/header.php';
     require_once 'db/conn.php';
     //Get application by id
-        if(isset($_GET['id'])){
+        if(!isset($_GET['id'])){
+            echo "<h1 class='text-danger'>Please check details and try again</h1>";
+        }else{
             $id = $_GET['id'];
             $result = $crud->getApplicationDetails($id);
-
-        }else{
-            echo "<h1 class='text-danger'>Please check details and try again</h1>";
-    }
+    
 ?>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -26,7 +25,7 @@
         </div>
         <?php 
             
-        
+        }
     ?>
 
 

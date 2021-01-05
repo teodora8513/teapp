@@ -52,5 +52,44 @@
             $result = $stmt->fetch();   //fetch record into one variable
             return $result;
         }
+
+        public function editApplication($id,$cname, $position,$city, $doa, $cmail, $notes,$astatus){
+            try{
+            $sql = "UPDATE `application` SET 
+                `company_name`=:cname,`position`=:position,
+                `contact_mail`=:mail,`city`=:city,`doa`=:doa,`notes`=:notes,
+                `status_id`=:astatus WHERE application_id=:id";
+
+                $stmt = $this->db->prepare($sql);     
+                $stmt->bindparam(':id', $id);
+                $stmt->bindparam(':cname',$cname);     
+                $stmt->bindparam(':position',$position);
+                $stmt->bindparam(':cmail', $cmail);                
+                $stmt->bindparam(':city',$city);
+                $stmt->bindparam(':doa',$doa);
+                $stmt->bindparam(':notes',$notes);
+                $stmt->bindparam(':astatus',$astatus);
+
+                $stmt->execute();
+                return true;
+            }catch(PDOException $e){
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+        public function deleteApplication($id){
+            try{
+            $sql = "delete from application where application_id = :id";
+            $stmt = $this->db->prepare($sql);
+            $stmt-> bindparam(':id', $id);
+            $stmt->execute(); 
+            return true;
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+                return false;
+            }
+        }
     }
 ?>

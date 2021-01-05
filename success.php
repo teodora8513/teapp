@@ -33,7 +33,7 @@
         <p class="card-text">Notes:<?php echo " ". $_POST['notes'];?></p>
         <p class="card-text">Application status:<?php echo " ". $_POST['status'];?></p>
         
-        <a href="applications.php" class="btn btn-primary">Go somewhere</a>
+        <a href="applications.php" class="btn btn-primary">Go back</a>
     </div>
     </div>
     <?php 
