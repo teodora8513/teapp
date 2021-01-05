@@ -14,10 +14,12 @@
         $isSuccess  =$crud->insert($cname, $position, $city, $doa, $cmail, $notes, $status);    //vraca true/false
         
         if($isSuccess){
-            echo '<h1 class="text-center text-success">You have submited the application</h1>';
+            //echo '<h1 class="text-center text-success">You have submited the application</h1>';
+            include 'successMessage.php';
         }
         else{
-            echo '<h1 class="text-center text-danger">There was an error</h1>';
+            //echo '<h1 class="text-center text-danger">There was an error</h1>';
+            include 'errorMessages.php';
         }
     }    
 ?>

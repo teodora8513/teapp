@@ -27,11 +27,11 @@
         <form method ="post" action ="success.php">
         <div class="form-group">
             <label for="companyName">Company name</label>
-            <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Ubisoft">
+            <input required type="text" class="form-control" id="companyName" name="companyName" placeholder="Ubisoft">
         </div>
         <div class="form-group">
             <label for="position">Position</label>
-            <input type="text" class="form-control" id="position" name="position" placeholder="QA intern">
+            <input required type="text" class="form-control" id="position" name="position" placeholder="QA intern">
         </div>
         <div class="form-row">
         <div class="form-group col-md-6">

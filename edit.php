@@ -7,7 +7,8 @@
         $result = $crud->getStatus();
         
         if(!isset($_GET['id'])){
-            echo '<h1 class="text-danger">Error - can not edit the application</h1>';
+            //echo '<h1 class="text-danger">Error - can not edit the application</h1>';
+            include 'errorMessages.php';
         }else{
             $id = $_GET['id'];
             $application =$crud->getApplicationDetails($id);
