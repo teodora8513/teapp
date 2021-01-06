@@ -35,7 +35,28 @@
         <p class="card-text">Notes:<?php echo " ". $_POST['notes'];?></p>
         <p class="card-text">Application status:<?php echo " ". $_POST['status'];?></p>
         
-        <a href="applications.php" class="btn btn-primary">Go back</a>
+        <!--<a href="applications.php" class="btn btn-primary">Go back</a>-->
+        <a id="button" class="btn btn-primary" href="applications.php">Go back</a></p>
+            <p id="container"><!-- currently it's empty --></p>
+
+            <!-- including jQuery from the google cdn -->
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+            <script type="text/javascript">
+            //Skripta
+            $(document).ready(function(){
+                $('a#button').click(function(){
+                    $.ajax({
+                        url: this.href,
+                        type: 'GET',
+                        dataType: 'html',
+                        success: function (data) {
+                            $('#container').html(data);
+                        }
+                    });
+                });
+            });
+</script>
     </div>
     </div>
     <?php 
