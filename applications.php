@@ -1,6 +1,7 @@
 <?php
     $title = "Applications";
-    include 'includes/header.php';
+    include 'includes/header.php';  //Ovde je session_start()
+    require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
     $results =$crud->getApplications();
 

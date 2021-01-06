@@ -1,6 +1,7 @@
     <?php
         $title = "Input page";
         include 'includes/header.php';
+        require_once 'includes/auth_check.php';
         require_once 'db/conn.php';
         echo '<h1>Please enter your application</h1>';
         $result = $crud->getStatus();

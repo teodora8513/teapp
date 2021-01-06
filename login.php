@@ -18,7 +18,7 @@
             else{
                 //Pravljenje sesije
                 $_SESSION['username'] = $username;
-                $_SESSION['id']= $result['id'];
+                $_SESSION['userid']= $result['id'];
             header("Location: applications.php");
             }
         }

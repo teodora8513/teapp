@@ -1,6 +1,7 @@
 <?php 
     $title = "View application";
     include 'includes/header.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
     //Get application by id
         if(!isset($_GET['id'])){

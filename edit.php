@@ -2,6 +2,7 @@
     <?php
         $title = "Edit application";
         include 'includes/header.php';
+        require_once 'includes/auth_check.php';
         require_once 'db/conn.php';
         echo '<h1>Please update your application</h1>';
         $result = $crud->getStatus();
