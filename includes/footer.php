@@ -1,4 +1,4 @@
-    <div id="footer" class="p-3 md-2 bg-secondary text-white fixed-bottom">
+    <div id="footer" class="p-3 md-2 bg-secondary text-white ">
       <p class="text-center">Copyright &copy; - Teapp <?php echo date('Y')."."?></p>
     </div>
     </div>
